@@ -1,0 +1,16 @@
+/*   向上滑动 - 滚轮向下 */
+.page-moveToTop{
+  animation: moveToTop 0.8s ease both;
+}
+@keyframes moveToTop {  /*当前页面上去*/
+  from{}
+  to{transform: translateY(-100%)}
+}
+
+.page-moveFromBottom{
+  animation: moveFromBottom 0.8s ease both;
+}
+@keyframes moveFromBottom {  /* 后面的页面接上来*/
+  from{transform: translateY(100%)}
+  to{}
+}

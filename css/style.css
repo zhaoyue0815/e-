@@ -1,0 +1,150 @@
+html,body {
+  width:100%;
+  height:100%;
+}
+#wrap{
+  width:100%;
+  height:100%;
+  overflow: hidden;
+
+}
+/* 头部 */
+.header {
+  /*position: absolute;
+  left:0;
+  top: 0;*/
+  width:100%;
+  height:60px;
+  background-color: rgb(0,0,0);
+  z-index: 11;
+}
+.headerWrapper{
+  width: 980px;
+  height:100% ;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav ul{
+  font: 14px "微软雅黑";
+  color: white;
+}
+.nav ul li{
+  float: left;
+  width: 90px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+.nav ul li:hover{
+  background-color: #fc0;
+  color: black;
+}
+.nav .active{
+  background-color: #fc0;
+  color: black;
+}
+
+/* 内容区 */
+.content{
+  position: relative;
+}
+/* 导航小圆点 */
+.pointNav{
+  position: fixed;
+  top:50%;
+  right:1%;
+  z-index: 5;
+}
+.pointNav li{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+.pointNav li:hover{
+  background-color: black;
+}
+.pointNav .active{
+  background-color: black;
+}
+
+/* 竖向滑屏 */
+.contentList{
+  width:100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -5;
+  transition: all 0.8s;
+}
+.contentList .firstLi{
+  background-image: url("../img/s1.jpg");
+  overflow: hidden;
+}
+.contentList .firstLi div{
+  width: 980px;
+  margin: 0 auto;
+  height:100%;
+}
+.first{
+
+}
+.first img{
+  display: block;
+  width:100%;
+
+}
+/* page 2 */
+.secondLi, .thirdLi, .fourLi, .fiveLi{
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.leftPhoto{
+  display: flex;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.leftPhoto li{
+  margin-right: 20px;
+  text-align: center;
+}
+.leftPhoto li p{
+  margin:20px 0;
+  font-size: 18px;
+}
+.bg{
+  /*width:100%;
+  height:100%;*/
+  position: absolute;
+  left:61%;
+  top: 10%;
+}
+ .right{
+  position: absolute;
+  right:5%;
+  top:10%;
+  border-right: 2px solid black;
+  padding: 10px;
+  text-align: right;
+   animation: moveToTwo 0.8s;
+}
+ .right h1{
+  font-size: 34px;
+  font-weight: 100;
+}
+ .right p{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* 动画类 */
+@keyframes moveToTwo {
+  from{
+    transform: translateY(-100%) }
+  to{ transform: translateY(0)  }
+}
